@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5f41f2b092b87f24d9e378cb6e986a9b
+guid: bd75b6c00deb7e443a14e5286b57b1b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 588462340070905570
-    second: PowerBar_0
+      213: 2091933227413945969
+    second: PowerIndicatorMask_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PowerBar_0
+      name: PowerIndicatorMask_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 12
-        height: 12
+        x: 11
+        y: 18
+        width: 103
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e61f976163aa2800800000000000000
-      internalID: 588462340070905570
+      spriteID: 17e38d1df2a080d10800000000000000
+      internalID: 2091933227413945969
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PowerBar_0: 588462340070905570
+      PowerIndicatorMask_0: 2091933227413945969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
