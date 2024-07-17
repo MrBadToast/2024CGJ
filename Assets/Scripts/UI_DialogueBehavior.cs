@@ -36,7 +36,7 @@ public class UI_DialogueBehavior : StaticSerializedMonoBehaviour<UI_DialogueBeha
     private void Start()
     {
         inputWaitObject.SetActive(false);
-        visualGroup.SetActive(false);
+        //visualGroup.SetActive(false);
         visualGroup.GetComponent<CanvasGroup>().alpha = 0f;
     }
 
