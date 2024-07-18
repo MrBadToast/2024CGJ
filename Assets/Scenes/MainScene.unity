@@ -669,6 +669,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1431272215}
   - {fileID: 927016860}
   - {fileID: 538815182}
   - {fileID: 992910217}
@@ -1717,6 +1718,7 @@ GameObject:
   - component: {fileID: 538815182}
   - component: {fileID: 538815183}
   - component: {fileID: 538815184}
+  - component: {fileID: 538815185}
   m_Layer: 5
   m_Name: PowerBar
   m_TagString: Untagged
@@ -1761,7 +1763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
+    SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects: []
     SerializedBytesString: 
@@ -1777,6 +1779,13 @@ MonoBehaviour:
   hitText: {fileID: 3995746044436605906, guid: 56d70437797ba284980f46caf1dabb63, type: 3}
   missedText: {fileID: 6352677941684478449, guid: a264bcfbffd92eb44a7b6889cee33e58, type: 3}
   resultTextParent: {fileID: 1724266243}
+  sound_hit:
+  - {fileID: 8300000, guid: 01f7ba58cf5258647813c9d953000be9, type: 3}
+  - {fileID: 8300000, guid: 24eeb2834c7059b4c83faa3a5440e2ea, type: 3}
+  - {fileID: 8300000, guid: 8a173917a78e1c946b959e0d1425bcca, type: 3}
+  sound_whoosh:
+  - {fileID: 8300000, guid: 7165168245e9e8c4b9e509b59d28964a, type: 3}
+  flashAnimation: {fileID: 1431272212}
   hitTarget: {fileID: 1605240652}
   powerBarSpeed: 1
   powerBarSpawnpoint: 60
@@ -1889,6 +1898,103 @@ MonoBehaviour:
   optionalScrambleMode: 0
   optionalShakeRandomnessMode: 0
   optionalString: 
+--- !u!82 &538815185
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538815181}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.743
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &558914645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2393,6 +2499,18 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1013801903}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3654,6 +3772,7 @@ GameObject:
   - component: {fileID: 1013801901}
   - component: {fileID: 1013801900}
   - component: {fileID: 1013801902}
+  - component: {fileID: 1013801903}
   m_Layer: 5
   m_Name: Hidden
   m_TagString: Untagged
@@ -3733,6 +3852,103 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!82 &1013801903
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013801898}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e3448981b492c6740b70e1aac752e070, type: 3}
+  m_Resource: {fileID: 8300000, guid: e3448981b492c6740b70e1aac752e070, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1015381837
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,6 +4255,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063351960}
   m_CullTransparentMesh: 1
+--- !u!1 &1086694226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086694228}
+  - component: {fileID: 1086694227}
+  m_Layer: 0
+  m_Name: ClickSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1086694227
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086694226}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 63d6974d0ce023b478a609892a7ef1b9, type: 3}
+  m_Resource: {fileID: 8300000, guid: 63d6974d0ce023b478a609892a7ef1b9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1086694228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086694226}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173891874
 GameObject:
   m_ObjectHideFlags: 0
@@ -4230,7 +4575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
+    SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects: []
     SerializedBytesString: 
@@ -4243,6 +4588,7 @@ MonoBehaviour:
   context: {fileID: 1228817024}
   inputWaitObject: {fileID: 1933817753}
   visualGroupAnim: {fileID: 1264194782}
+  clickSound: {fileID: 1086694227}
 --- !u!1 &1228817022
 GameObject:
   m_ObjectHideFlags: 0
@@ -4603,6 +4949,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1086694227}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4980,6 +5338,18 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1013801903}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5554,6 +5924,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1086694227}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1334174974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5603,7 +5985,7 @@ GameObject:
   - component: {fileID: 1336274872}
   - component: {fileID: 1336274871}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6054,6 +6436,190 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1431272211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431272215}
+  - component: {fileID: 1431272214}
+  - component: {fileID: 1431272213}
+  - component: {fileID: 1431272212}
+  m_Layer: 5
+  m_Name: Flash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1431272212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431272211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
+  delay: 0
+  duration: 0.2
+  easeType: 9
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loopType: 0
+  loops: 1
+  id: 
+  isRelative: 0
+  isFrom: 1
+  isIndependentUpdate: 0
+  autoKill: 0
+  autoGenerate: 1
+  isActive: 1
+  isValid: 1
+  target: {fileID: 1431272213}
+  animationType: 7
+  targetType: 3
+  forcedTargetType: 0
+  autoPlay: 1
+  useTargetAsV3: 0
+  endValueFloat: 0.3
+  endValueV3: {x: 0, y: 0, z: 0}
+  endValueV2: {x: 0, y: 0}
+  endValueColor: {r: 1, g: 1, b: 1, a: 1}
+  endValueString: 
+  endValueRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  endValueTransform: {fileID: 0}
+  optionalBool0: 0
+  optionalBool1: 0
+  optionalFloat0: 0
+  optionalInt0: 0
+  optionalRotationMode: 0
+  optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
+  optionalString: 
+--- !u!114 &1431272213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431272211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1927945706049996841, guid: 6a466fb23f35d4a4788b39783deac16b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1431272214
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431272211}
+  m_CullTransparentMesh: 1
+--- !u!224 &1431272215
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431272211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 150298002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1468111062
 GameObject:
   m_ObjectHideFlags: 0
@@ -6142,6 +6708,7 @@ GameObject:
   - component: {fileID: 1488484528}
   - component: {fileID: 1488484530}
   - component: {fileID: 1488484527}
+  - component: {fileID: 1488484531}
   m_Layer: 5
   m_Name: Hidden
   m_TagString: Untagged
@@ -6183,7 +6750,7 @@ MonoBehaviour:
   updateType: 0
   isSpeedBased: 0
   hasOnStart: 0
-  hasOnPlay: 0
+  hasOnPlay: 1
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 1
@@ -6194,7 +6761,19 @@ MonoBehaviour:
       m_Calls: []
   onPlay:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1488484531}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -6420,6 +6999,103 @@ MonoBehaviour:
   preset: 0
   onEnableBehaviour: 3
   onDisableBehaviour: 0
+--- !u!82 &1488484531
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488484525}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 72479c05c208e5546a7fdcadfe1fa728, type: 3}
+  m_Resource: {fileID: 8300000, guid: 72479c05c208e5546a7fdcadfe1fa728, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1510767454
 GameObject:
   m_ObjectHideFlags: 0
@@ -6838,8 +7514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
-    SerializedBytes: 01010e00000069006e00740072006f00530065007100750065006e006300650073002f00000000012000000049006e00740072006f00530065007100750065006e00630065005b005d002c00200041007300730065006d0062006c0079002d0043005300680061007200700000000000060a00000000000000022f01000000011d0000005300650071005f004400690061006c006f006700750065002c00200041007300730065006d0062006c0079002d004300530068006100720070000100000001010800000063006f006e00740065007800740073002f020000000119000000530079007300740065006d002e0053007400720069006e0067005b005d002c0020006d00730063006f0072006c00690062000200000006090000000000000028010600000058d601c669d5c8b2e4b22e0028011300000094c698c920008cc1ddc244c72000e4b43cc768c1e4b274ba200044c5dcc2a0acc0c9ccb92e002801170000005ccdfcad20002200f8ad2000acc074ac220074c720007cc7b4c598b030ae2000dcc291c788d5b5c2c8b2e4b22e002801180000001cc815c8e0c244c7200020c7c0c958d530ae200098d7e0b42000c0c908aefcac200019ac40c7200038c1c1c0d0c51cc128012c000000a4c2a4c25cb8200078c704ac74c730ae7cb92000ecd330ae58d5e0ac2c002000d0c9b9c274c7200018b4b4c584bcb0b92000acc08cb774c720008dc19ccd58d594b220007cc774c720001cbcddc088d5b5c2c8b2e4b22e0028011a000000f9b2e0c240c7200074c7e4b444c72000d5b330ae200004c774d52000b9d2c4bc88d7200020c11cbc18b4c8c5b5c2c8b2e4b22e0028010c0000003cbb60b8200044be00bcacb9d0c52000d0b974c7e0c82e00280130000000220058ceccb8220058c72000b9d231c1c1c0200024c7acb901c878c720007cb180b774c720001cbcddc060d5200018c2200088c730ae20004cb538bbd0c52000b4c554ca200018c22000c6c594b2200020c1ddd074c7c8c5b5c2c8b2e4b22e00280111000000f8adfcb7200074c71cc880bd30d12000dcc291c774d5f4bca0acb5c2c8b2e4b22e0007052b011000000063006c006f007300650041006600740065007200460069006e006900730068000005022f03000000011a0000005300650071005f004500760065006e0074002c00200041007300730065006d0062006c0079002d00430053006800610072007000030000000101060000006500760065006e00740073002f04000000013500000055006e0069007400790045006e00670069006e0065002e004500760065006e00740073002e0055006e006900740079004500760065006e0074002c00200055006e0069007400790045006e00670069006e0065002e0043006f00720065004d006f00640075006c006500040000000101110000006d005f00500065007200730069007300740065006e007400430061006c006c0073002f05000000013e00000055006e0069007400790045006e00670069006e0065002e004500760065006e00740073002e00500065007200730069007300740065006e007400430061006c006c00470072006f00750070002c00200055006e0069007400790045006e00670069006e0065002e0043006f00720065004d006f00640075006c006500050000000101070000006d005f00430061006c006c0073002f060000000168000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e004c00690073007400600031005b005b0055006e0069007400790045006e00670069006e0065002e004500760065006e00740073002e00500065007200730069007300740065006e007400430061006c006c002c00200055006e0069007400790045006e00670069006e0065002e0043006f00720065004d006f00640075006c0065005d005d002c0020006d00730063006f0072006c006900620006000000060100000000000000022f07000000013900000055006e0069007400790045006e00670069006e0065002e004500760065006e00740073002e00500065007200730069007300740065006e007400430061006c006c002c00200055006e0069007400790045006e00670069006e0065002e0043006f00720065004d006f00640075006c006500070000000b01080000006d005f00540061007200670065007400000000002701180000006d005f0054006100720067006500740041007300730065006d0062006c00790054007900700065004e0061006d0065000137000000440047002e0054007700650065006e0069006e0067002e0044004f0054007700650065006e0041006e0069006d006100740069006f006e002c00200041007300730065006d0062006c0079002d004300530068006100720070002d0066006900720073007400700061007300730027010c0000006d005f004d006500740068006f0064004e0061006d006500010900000044004f0052006500730074006100720074001d01060000006d005f004d006f0064006500010000000000000001010b0000006d005f0041007200670075006d0065006e00740073002f08000000013800000055006e0069007400790045006e00670069006e0065002e004500760065006e00740073002e0041007200670075006d0065006e007400430061006300680065002c00200055006e0069007400790045006e00670069006e0065002e0043006f00720065004d006f00640075006c006500080000000b01100000006d005f004f0062006a0065006300740041007200670075006d0065006e007400010000002701200000006d005f004f0062006a0065006300740041007200670075006d0065006e00740041007300730065006d0062006c00790054007900700065004e0061006d006500011f00000055006e0069007400790045006e00670069006e0065002e004f0062006a006500630074002c00200055006e0069007400790045006e00670069006e00650017010d0000006d005f0049006e00740041007200670075006d0065006e007400000000001f010f0000006d005f0046006c006f006100740041007200670075006d0065006e007400000000002701100000006d005f0053007400720069006e00670041007200670075006d0065006e00740001000000002b010e0000006d005f0042006f006f006c0041007200670075006d0065006e00740000051d010b0000006d005f00430061006c006c00530074006100740065000200000000000000050705050505022f0900000001190000005300650071005f0057006100690074002c00200041007300730065006d0062006c0079002d00430053006800610072007000090000001f0104000000740069006d0065000000003f050230010000000a00000001010800000063006f006e007400650078007400730030020000000b000000060100000000000000280118000000c0c908ae2000f4bce0ac2000c4ace0c2200083ac40c72000220078c704ac20008cac74c7c0c9220085c7c8b2e4b22e0007052b011000000063006c006f007300650041006600740065007200460069006e0069007300680000050230030000000c0000000101060000006500760065006e007400730030040000000d0000000101110000006d005f00500065007200730069007300740065006e007400430061006c006c00730030050000000e0000000101070000006d005f00430061006c006c00730030060000000f000000060100000000000000023007000000100000000b01080000006d005f00540061007200670065007400020000002701180000006d005f0054006100720067006500740041007300730065006d0062006c00790054007900700065004e0061006d006500012100000055006e0069007400790045006e00670069006e0065002e0041006e0069006d00610074006f0072002c00200055006e0069007400790045006e00670069006e00650027010c0000006d005f004d006500740068006f0064004e0061006d006500010400000050006c00610079001d01060000006d005f004d006f0064006500050000000000000001010b0000006d005f0041007200670075006d0065006e00740073003008000000110000000b01100000006d005f004f0062006a0065006300740041007200670075006d0065006e007400030000002701200000006d005f004f0062006a0065006300740041007200670075006d0065006e00740041007300730065006d0062006c00790054007900700065004e0061006d006500011f00000055006e0069007400790045006e00670069006e0065002e004f0062006a006500630074002c00200055006e0069007400790045006e00670069006e00650017010d0000006d005f0049006e00740041007200670075006d0065006e007400000000001f010f0000006d005f0046006c006f006100740041007200670075006d0065006e007400000000002701100000006d005f0053007400720069006e00670041007200670075006d0065006e007400010200000049004e002b010e0000006d005f0042006f006f006c0041007200670075006d0065006e00740000051d010b0000006d005f00430061006c006c00530074006100740065000200000000000000050705050505023009000000120000001f0104000000740069006d0065000000003f050230010000001300000001010800000063006f006e0074006500780074007300300200000014000000060300000000000000280121000000f8adacb9e0ac2000f9b2e0c2200008b25ec5d0c5200088c794b2200083ac40c72000f9b2e0c274c7200058ceccb874d57cc520b4200000b3c1c085c7c8b2e4b22e00280126000000220078c704ac20008cac74c7c0c9220000ac200000acddb4200028cc8cac200018b474ba200000b3c1c044c7200058ceccb858d594b270b3200031c1f5ac58d58cac200029b4c8b2e4b22e0028011200000058ceccb8200029bc95bc40c720002200a9cda9ac200094c695bc220085c7c8b2e4b22e0007052b011000000063006c006f007300650041006600740065007200460069006e006900730068000005023003000000150000000101060000006500760065006e00740073003004000000160000000101110000006d005f00500065007200730069007300740065006e007400430061006c006c0073003005000000170000000101070000006d005f00430061006c006c007300300600000018000000060100000000000000023007000000190000000b01080000006d005f00540061007200670065007400040000002701180000006d005f0054006100720067006500740041007300730065006d0062006c00790054007900700065004e0061006d0065000137000000440047002e0054007700650065006e0069006e0067002e0044004f0054007700650065006e0041006e0069006d006100740069006f006e002c00200041007300730065006d0062006c0079002d004300530068006100720070002d0066006900720073007400700061007300730027010c0000006d005f004d006500740068006f0064004e0061006d006500010900000044004f0052006500730074006100720074001d01060000006d005f004d006f0064006500010000000000000001010b0000006d005f0041007200670075006d0065006e007400730030080000001a0000000b01100000006d005f004f0062006a0065006300740041007200670075006d0065006e007400050000002701200000006d005f004f0062006a0065006300740041007200670075006d0065006e00740041007300730065006d0062006c00790054007900700065004e0061006d006500011f00000055006e0069007400790045006e00670069006e0065002e004f0062006a006500630074002c00200055006e0069007400790045006e00670069006e00650017010d0000006d005f0049006e00740041007200670075006d0065006e007400000000001f010f0000006d005f0046006c006f006100740041007200670075006d0065006e007400000000002701100000006d005f0053007400720069006e00670041007200670075006d0065006e00740001000000002b010e0000006d005f0042006f006f006c0041007200670075006d0065006e00740000051d010b0000006d005f00430061006c006c005300740061007400650002000000000000000507050505050230030000001b0000000101060000006500760065006e007400730030040000001c0000000101110000006d005f00500065007200730069007300740065006e007400430061006c006c00730030050000001d0000000101070000006d005f00430061006c006c00730030060000001e0000000601000000000000000230070000001f0000000b01080000006d005f00540061007200670065007400060000002701180000006d005f0054006100720067006500740041007300730065006d0062006c00790054007900700065004e0061006d0065000137000000440047002e0054007700650065006e0069006e0067002e0044004f0054007700650065006e0041006e0069006d006100740069006f006e002c00200041007300730065006d0062006c0079002d004300530068006100720070002d0066006900720073007400700061007300730027010c0000006d005f004d006500740068006f0064004e0061006d006500010900000044004f0052006500730074006100720074001d01060000006d005f004d006f0064006500010000000000000001010b0000006d005f0041007200670075006d0065006e00740073003008000000200000000b01100000006d005f004f0062006a0065006300740041007200670075006d0065006e007400070000002701200000006d005f004f0062006a0065006300740041007200670075006d0065006e00740041007300730065006d0062006c00790054007900700065004e0061006d006500011f00000055006e0069007400790045006e00670069006e0065002e004f0062006a006500630074002c00200055006e0069007400790045006e00670069006e00650017010d0000006d005f0049006e00740041007200670075006d0065006e007400000000001f010f0000006d005f0046006c006f006100740041007200670075006d0065006e007400000000002701100000006d005f0053007400720069006e00670041007200670075006d0065006e00740001000000002b010e0000006d005f0042006f006f006c0041007200670075006d0065006e00740000051d010b0000006d005f00430061006c006c005300740061007400650002000000000000000507050505050230010000002100000001010800000063006f006e007400650078007400730030020000002200000006040000000000000028012500000001c808c85cd52000c0d074c70dbcd0c52000530070006100630065007cb9200074c7a9c674d52000220058ceccb822007cb92000c4c989d560d5200018c2200088c7b5c2c8b2e4b22e00280120000000fcc8b4c5c4c92000dcc204ac2000b4b0d0c5200058ceccb87cb92000c8b958cec0c92000bbba58d574ba200058ceccb800ac200085c8ccb829b4c8b2e4b22e0028013c000000f9b2e0c274c7200058ceccb85cd52000220078c704ac200074c7c8c558b3200083ac220040c720008cc111c95cd52000acc08cb7e4b458c7200088d43cc75cb82000ccb344c500ac2000e4b2dcc220007cc7c1c0ddc05cd644c7200001c604c760d5200018c2200088c744c7200083ac85c7c8b2e4b22e0028010b000000f8adfcb7200089d5b4c644c7200055bec8b2e4b22e0007052b011000000063006c006f007300650041006600740065007200460069006e0069007300680001050705
+    SerializedFormat: 2
+    SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 927016863}
     - {fileID: 0}
@@ -6853,9 +7529,493 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: introSequences
+      Entry: 7
+      Data: 0|IntroSequence[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 7
+      Data: 1|Seq_Dialogue, Assembly-CSharp
+    - Name: contexts
+      Entry: 7
+      Data: 2|System.String[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 9
+    - Name: 
+      Entry: 1
+      Data: "\uD658\uC601\uD569\uB2C8\uB2E4."
+    - Name: 
+      Entry: 1
+      Data: "\uC694\uC998 \uC18C\uC2DD\uC744 \uB4E4\uC73C\uC168\uB2E4\uBA74 \uC544\uC2DC\uACA0\uC9C0\uB9CC."
+    - Name: 
+      Entry: 1
+      Data: "\uCD5C\uADFC \"\uADF8 \uC0AC\uAC74\"\uC774 \uC77C\uC5B4\uB098\uAE30
+        \uC2DC\uC791\uD588\uC2B5\uB2C8\uB2E4."
+    - Name: 
+      Entry: 1
+      Data: "\uC81C\uC815\uC2E0\uC744 \uC720\uC9C0\uD558\uAE30 \uD798\uB4E0 \uC9C0\uAE08\uACFC
+        \uAC19\uC740 \uC138\uC0C1\uC5D0\uC11C"
+    - Name: 
+      Entry: 1
+      Data: "\uC2A4\uC2A4\uB85C \uC778\uAC04\uC774\uAE30\uB97C \uD3EC\uAE30\uD558\uACE0,
+        \uC9D0\uC2B9\uC774 \uB418\uC5B4\uBC84\uB9B0 \uC0AC\uB78C\uC774 \uC18D\uCD9C\uD558\uB294
+        \uC77C\uC774 \uBC1C\uC0DD\uD588\uC2B5\uB2C8\uB2E4."
+    - Name: 
+      Entry: 1
+      Data: "\uB2F9\uC2E0\uC740 \uC774\uB4E4\uC744 \uB3D5\uAE30 \uC704\uD574 \uD2B9\uBCC4\uD788
+        \uC120\uBC1C\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    - Name: 
+      Entry: 1
+      Data: "\uBB3C\uB860 \uBE44\uBC00\uB9AC\uC5D0 \uB9D0\uC774\uC8E0."
+    - Name: 
+      Entry: 1
+      Data: "\"\uCE58\uB8CC\"\uC758 \uD2B9\uC131\uC0C1 \uC724\uB9AC\uC801\uC778 \uB17C\uB780\uC774
+        \uBC1C\uC0DD\uD560 \uC218 \uC788\uAE30 \uB54C\uBB38\uC5D0 \uC5B4\uCA54 \uC218
+        \uC5C6\uB294 \uC120\uD0DD\uC774\uC5C8\uC2B5\uB2C8\uB2E4."
+    - Name: 
+      Entry: 1
+      Data: "\uADF8\uB7FC \uC774\uC81C\uBD80\uD130 \uC2DC\uC791\uD574\uBCF4\uACA0\uC2B5\uB2C8\uB2E4."
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: closeAfterFinish
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Seq_Event, Assembly-CSharp
+    - Name: events
+      Entry: 7
+      Data: 4|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 5|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 7|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 0
+    - Name: m_TargetAssemblyTypeName
+      Entry: 1
+      Data: DG.Tweening.DOTweenAnimation, Assembly-CSharp-firstpass
+    - Name: m_MethodName
+      Entry: 1
+      Data: DORestart
+    - Name: m_Mode
+      Entry: 3
+      Data: 1
+    - Name: m_Arguments
+      Entry: 7
+      Data: 8|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 1
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: 
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|Seq_Wait, Assembly-CSharp
+    - Name: time
+      Entry: 4
+      Data: 0.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|Seq_Dialogue, Assembly-CSharp
+    - Name: contexts
+      Entry: 7
+      Data: 11|System.String[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: "\uC9C0\uAE08 \uBCF4\uACE0 \uACC4\uC2E0 \uAC83\uC740 \"\uC778\uAC04 \uAC8C\uC774\uC9C0\"\uC785\uB2C8\uB2E4."
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: closeAfterFinish
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|Seq_Event, Assembly-CSharp
+    - Name: events
+      Entry: 7
+      Data: 13|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 14|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 16|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 2
+    - Name: m_TargetAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Animator, UnityEngine
+    - Name: m_MethodName
+      Entry: 1
+      Data: Play
+    - Name: m_Mode
+      Entry: 3
+      Data: 5
+    - Name: m_Arguments
+      Entry: 7
+      Data: 17|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 3
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: IN
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 18|Seq_Wait, Assembly-CSharp
+    - Name: time
+      Entry: 4
+      Data: 0.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|Seq_Dialogue, Assembly-CSharp
+    - Name: contexts
+      Entry: 7
+      Data: 20|System.String[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 1
+      Data: "\uADF8\uB9AC\uACE0 \uB2F9\uC2E0 \uB208\uC55E\uC5D0 \uC788\uB294 \uAC83\uC740
+        \uB2F9\uC2E0\uC774 \uCE58\uB8CC\uD574\uC57C\uB420 \uB300\uC0C1\uC785\uB2C8\uB2E4."
+    - Name: 
+      Entry: 1
+      Data: "\"\uC778\uAC04 \uAC8C\uC774\uC9C0\"\uAC00 \uAC00\uB4DD \uCC28\uAC8C
+        \uB418\uBA74 \uB300\uC0C1\uC744 \uCE58\uB8CC\uD558\uB294\uB370 \uC131\uACF5\uD558\uAC8C
+        \uB429\uB2C8\uB2E4."
+    - Name: 
+      Entry: 1
+      Data: "\uCE58\uB8CC \uBC29\uBC95\uC740 \"\uCDA9\uACA9 \uC694\uBC95\"\uC785\uB2C8\uB2E4."
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: closeAfterFinish
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 21|Seq_Event, Assembly-CSharp
+    - Name: events
+      Entry: 7
+      Data: 22|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 23|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 24|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 25|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 4
+    - Name: m_TargetAssemblyTypeName
+      Entry: 1
+      Data: DG.Tweening.DOTweenAnimation, Assembly-CSharp-firstpass
+    - Name: m_MethodName
+      Entry: 1
+      Data: DORestart
+    - Name: m_Mode
+      Entry: 3
+      Data: 1
+    - Name: m_Arguments
+      Entry: 7
+      Data: 26|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 5
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: 
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 27|Seq_Event, Assembly-CSharp
+    - Name: events
+      Entry: 7
+      Data: 28|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 29|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 30|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 31|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
+    - Name: m_Target
+      Entry: 10
+      Data: 6
+    - Name: m_TargetAssemblyTypeName
+      Entry: 1
+      Data: DG.Tweening.DOTweenAnimation, Assembly-CSharp-firstpass
+    - Name: m_MethodName
+      Entry: 1
+      Data: DORestart
+    - Name: m_Mode
+      Entry: 3
+      Data: 1
+    - Name: m_Arguments
+      Entry: 7
+      Data: 32|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
+    - Name: m_ObjectArgument
+      Entry: 10
+      Data: 7
+    - Name: m_ObjectArgumentAssemblyTypeName
+      Entry: 1
+      Data: UnityEngine.Object, UnityEngine
+    - Name: m_IntArgument
+      Entry: 3
+      Data: 0
+    - Name: m_FloatArgument
+      Entry: 4
+      Data: 0
+    - Name: m_StringArgument
+      Entry: 1
+      Data: 
+    - Name: m_BoolArgument
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_CallState
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 33|Seq_Dialogue, Assembly-CSharp
+    - Name: contexts
+      Entry: 7
+      Data: 34|System.String[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 1
+      Data: "\uC801\uC808\uD55C \uD0C0\uC774\uBC0D\uC5D0 Space\uB97C \uC774\uC6A9\uD574
+        \"\uCE58\uB8CC\"\uB97C \uC9C4\uD589\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+    - Name: 
+      Entry: 1
+      Data: "\uC8FC\uC5B4\uC9C4 \uC2DC\uAC04 \uB0B4\uC5D0 \uCE58\uB8CC\uB97C \uB9C8\uCE58\uC9C0
+        \uBABB\uD558\uBA74 \uCE58\uB8CC\uAC00 \uC885\uB8CC\uB429\uB2C8\uB2E4."
+    - Name: 
+      Entry: 1
+      Data: "\uB2F9\uC2E0\uC774 \uCE58\uB8CC\uD55C \"\uC778\uAC04 \uC774\uC5C8\uB358
+        \uAC83\"\uC740 \uC18C\uC911\uD55C \uC0AC\uB78C\uB4E4\uC758 \uD488\uC73C\uB85C
+        \uB3CC\uC544\uAC00 \uB2E4\uC2DC \uC77C\uC0C1\uC0DD\uD65C\uC744 \uC601\uC704\uD560
+        \uC218 \uC788\uC744 \uAC83\uC785\uB2C8\uB2E4."
+    - Name: 
+      Entry: 1
+      Data: "\uADF8\uB7FC \uD589\uC6B4\uC744 \uBE55\uB2C8\uB2E4."
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: closeAfterFinish
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   initialTimelimit: 30
-  bonusSeconds: 10
+  bonusSeconds: 7.5
   humaneDiminishSpeed: 0.2
   cureOnHit: 0.33
   minimumBarInterval: 0.5
@@ -6967,6 +8127,18 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1013801903}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7135,6 +8307,18 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1013801903}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8863,3 +10047,4 @@ SceneRoots:
   - {fileID: 1831874171}
   - {fileID: 1584459564}
   - {fileID: 1336274872}
+  - {fileID: 1086694228}

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Threading;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ public class PowerBar : StaticSerializedMonoBehaviour<PowerBar>
     public GameObject hitText;
     public GameObject missedText;
     public Transform resultTextParent;
+    public AudioClip[] sound_hit;
+    public AudioClip[] sound_whoosh;
+    public DOTweenAnimation flashAnimation;
 
     public HitTarget hitTarget;
     public float powerBarSpeed = 1.0f;
@@ -18,9 +22,12 @@ public class PowerBar : StaticSerializedMonoBehaviour<PowerBar>
 
     public bool DebugSpawn = false;
 
+    AudioSource audiosource;
+
     protected override void Awake()
     {
         base.Awake();
+        audiosource  = GetComponent<AudioSource>();
     }
 
     int count = 0;
@@ -47,6 +54,10 @@ public class PowerBar : StaticSerializedMonoBehaviour<PowerBar>
                     Instantiate(hitText, resultTextParent);
                     count++;
 
+                    flashAnimation.DORestart();
+
+                    audiosource.PlayOneShot(sound_hit[Random.Range(0, sound_hit.Length)]);
+
                     if (count % 2 == 0)
                         gameplayManager.playerAnimator.Play("Attack1");
                     else
@@ -54,6 +65,7 @@ public class PowerBar : StaticSerializedMonoBehaviour<PowerBar>
                 }
                 else
                 {
+                    audiosource.PlayOneShot(sound_whoosh[Random.Range(0, sound_whoosh.Length)]);
                     Instantiate(missedText, resultTextParent);
                     gameplayManager.OnHitMissed();
                 }

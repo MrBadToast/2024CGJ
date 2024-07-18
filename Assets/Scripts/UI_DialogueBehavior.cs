@@ -22,6 +22,7 @@ public class UI_DialogueBehavior : StaticSerializedMonoBehaviour<UI_DialogueBeha
     [SerializeField] private TextMeshProUGUI context;
     [SerializeField] private GameObject inputWaitObject;
     [SerializeField] private DOTweenAnimation visualGroupAnim;
+    [SerializeField] private AudioSource clickSound;
 
     private bool dialogueOpened = false;
     public bool DialogueOpened { get { return dialogueOpened; } }   // 현재 대사창 열렸는지 여부
@@ -84,6 +85,8 @@ public class UI_DialogueBehavior : StaticSerializedMonoBehaviour<UI_DialogueBeha
                 context.text = ctx.Substring(0,j);
                 yield return new WaitForSeconds(textInterval);
             }
+
+            clickSound.Play();
 
             dialogueProceed = false;
 
