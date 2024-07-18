@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1940829fe85acf948b4f6145dd6a6c7b, type: 3}
   m_Name: EI
   m_EditorClassIdentifier: 
+  rareOpponent: 1
   spr_normal: {fileID: 6112350568502758812, guid: 983793cd9ff73d04489decf7a44f88ea, type: 3}
   spr_hit:
   - {fileID: 140683056394715932, guid: 983793cd9ff73d04489decf7a44f88ea, type: 3}

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1940829fe85acf948b4f6145dd6a6c7b, type: 3}
   m_Name: Teddy1
   m_EditorClassIdentifier: 
+  rareOpponent: 0
   spr_normal: {fileID: -318973625387573850, guid: f893887a2de61254599ff436de259c0f, type: 3}
   spr_hit:
   - {fileID: 2437769232026954262, guid: f893887a2de61254599ff436de259c0f, type: 3}
-  - {fileID: 4775012919241943793, guid: f893887a2de61254599ff436de259c0f, type: 3}
-  spr_neutralized: {fileID: -8881244685771636926, guid: 4cb8107b76c3c464eb9b46e385e8626b, type: 3}
+  - {fileID: -8077397790922929505, guid: f893887a2de61254599ff436de259c0f, type: 3}
+  spr_neutralized: {fileID: -2548751405961964508, guid: f893887a2de61254599ff436de259c0f, type: 3}
   Pokedex_name: "\uACF0"
   Pokedex_text: 

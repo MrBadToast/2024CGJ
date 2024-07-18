@@ -127,10 +127,10 @@ TextureImporter:
       name: Teddy_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 5
-        width: 105
-        height: 113
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: Teddy_1
       rect:
         serializedVersion: 2
-        x: 140
-        y: 5
-        width: 116
-        height: 100
+        x: 128
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: Teddy_2
       rect:
         serializedVersion: 2
-        x: 285
-        y: 7
-        width: 93
-        height: 109
+        x: 256
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: Teddy_3
       rect:
         serializedVersion: 2
-        x: 443
-        y: 94
-        width: 28
-        height: 31
+        x: 384
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: Teddy_4
       rect:
         serializedVersion: 2
-        x: 470
-        y: 103
-        width: 7
-        height: 8
+        x: 512
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,99 +233,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Teddy_5
-      rect:
-        serializedVersion: 2
-        x: 371
-        y: 77
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 537da144f631f0c50800000000000000
-      internalID: 6633542144744937269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Teddy_6
-      rect:
-        serializedVersion: 2
-        x: 394
-        y: 3
-        width: 109
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1fa215173f0444240800000000000000
-      internalID: 4775012919241943793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Teddy_7
-      rect:
-        serializedVersion: 2
-        x: 538
-        y: 5
-        width: 85
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: efa05bb0e4a379330800000000000000
-      internalID: 3717504124295908094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Teddy_8
-      rect:
-        serializedVersion: 2
-        x: 182
-        y: 4
-        width: 42
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b250c0b246b2f8ba0800000000000000
-      internalID: -6084596862335318741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 441366ea8e4004d40be6ff25bb4ce30c
     internalID: 0
     vertices: []
     indices: 
@@ -340,10 +252,6 @@ TextureImporter:
       Teddy_2: 2437769232026954262
       Teddy_3: -8077397790922929505
       Teddy_4: -2548751405961964508
-      Teddy_5: 6633542144744937269
-      Teddy_6: 4775012919241943793
-      Teddy_7: 3717504124295908094
-      Teddy_8: -6084596862335318741
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

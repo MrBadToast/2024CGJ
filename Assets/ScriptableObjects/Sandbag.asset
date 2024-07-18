@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1940829fe85acf948b4f6145dd6a6c7b, type: 3}
   m_Name: Sandbag
   m_EditorClassIdentifier: 
+  rareOpponent: 1
   spr_normal: {fileID: 9093133502942415225, guid: 211b892330ec1f449b94e851f1eb6b23, type: 3}
   spr_hit:
   - {fileID: 3006852949428598020, guid: 211b892330ec1f449b94e851f1eb6b23, type: 3}

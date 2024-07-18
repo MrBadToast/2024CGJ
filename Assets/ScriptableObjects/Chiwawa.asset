@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1940829fe85acf948b4f6145dd6a6c7b, type: 3}
   m_Name: Chiwawa
   m_EditorClassIdentifier: 
+  rareOpponent: 1
   spr_normal: {fileID: 4741936614204935033, guid: 8bc382c8b5958d94fa7fb527c1e3ab25, type: 3}
   spr_hit:
   - {fileID: 5427045805969230069, guid: 8bc382c8b5958d94fa7fb527c1e3ab25, type: 3}
